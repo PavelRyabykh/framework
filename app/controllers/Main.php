@@ -2,12 +2,12 @@
 
 namespace app\controllers;
 
-use vendor\core\base\Controller;
 
-class Main extends Controller
+class Main extends App
 {
     public function indexAction()
     {
-        print 'Main::index()';
+        $this->layout = 'main';
+        $this->view = 'test';
     }
 }
