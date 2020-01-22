@@ -3,11 +3,10 @@
 namespace app\controllers;
 
 
-class Main extends App
+class PostsNewController extends AppController
 {
     public function indexAction()
     {
-        $this->layout = 'main';
-        $this->view = 'test';
+        print 'PostsNew::index()';
     }
 }
