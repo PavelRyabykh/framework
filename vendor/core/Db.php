@@ -31,16 +31,18 @@ class Db
     {
         self::$countSQL++;
         self::$queris[] = $sql;
+
         $stmt = $this->pdo->prepare($sql);
         return $stmt->execute();
     }
 
-    public function query($sql)
+    public function query($sql, $params = [])
     {
         self::$countSQL++;
         self::$queris[] = $sql;
+
         $stmt = $this->pdo->prepare($sql);
-        $res = $stmt->execute();
+        $res = $stmt->execute($params);
         if($res !== false) {
             return $stmt->fetchAll(\PDO::FETCH_ASSOC);
         } else {
