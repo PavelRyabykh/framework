@@ -11,6 +11,9 @@ class MainController extends AppController
     {
         $model = new Main();
         $posts = \R::findAll('posts');
-        $this->set(compact('posts'));
+
+        $this->setMeta('Главная страница', 'Описание страницы', 'Ключевые слова');
+        $meta = $this->meta;
+        $this->set(compact('posts', 'meta'));
     }
 }
