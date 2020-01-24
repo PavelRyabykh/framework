@@ -6,17 +6,20 @@ namespace vendor\core;
 
 class Db
 {
-    protected $pdo;
     private static $instance;
-    public static $countSQL = 0;
-    public static $queris = [];
+//    protected $pdo;
+//    public static $countSQL = 0;
+//    public static $queris = [];
 
     private function __construct()
     {
         $db = require ROOT . '/config/config_db.php';
-        $this->pdo = new \PDO($db['dsn'], $db['user'], $db['pass']);
-        $this->pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
-        $this->pdo->setAttribute(\PDO::ATTR_DEFAULT_FETCH_MODE, \PDO::FETCH_ASSOC);
+        require LIBS . '/rb-mysql.php';
+        \R::setup($db['dsn'], $db['user'], $db['pass']);
+        \R::freeze(true);
+//        $this->pdo = new \PDO($db['dsn'], $db['user'], $db['pass']);
+//        $this->pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+//        $this->pdo->setAttribute(\PDO::ATTR_DEFAULT_FETCH_MODE, \PDO::FETCH_ASSOC);
     }
 
     public static function getInstance()
@@ -27,27 +30,27 @@ class Db
         return self::$instance;
     }
 
-    public function execute($sql)
-    {
-        self::$countSQL++;
-        self::$queris[] = $sql;
-
-        $stmt = $this->pdo->prepare($sql);
-        return $stmt->execute();
-    }
-
-    public function query($sql, $params = [])
-    {
-        self::$countSQL++;
-        self::$queris[] = $sql;
-
-        $stmt = $this->pdo->prepare($sql);
-        $res = $stmt->execute($params);
-        if($res !== false) {
-            return $stmt->fetchAll(\PDO::FETCH_ASSOC);
-        } else {
-            return [];
-        }
-    }
+//    public function execute($sql)
+//    {
+//        self::$countSQL++;
+//        self::$queris[] = $sql;
+//
+//        $stmt = $this->pdo->prepare($sql);
+//        return $stmt->execute();
+//    }
+//
+//    public function query($sql, $params = [])
+//    {
+//        self::$countSQL++;
+//        self::$queris[] = $sql;
+//
+//        $stmt = $this->pdo->prepare($sql);
+//        $res = $stmt->execute($params);
+//        if($res !== false) {
+//            return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+//        } else {
+//            return [];
+//        }
+//    }
 
 }
