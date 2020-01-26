@@ -9,6 +9,7 @@ define('CORE', dirname(__DIR__) . '/vendor/core');
 define('ROOT', dirname(__DIR__));
 define('APP', dirname(__DIR__) . '/app');
 define('LIBS', dirname(__DIR__) . '/vendor/libs');
+define('CACHE', dirname(__DIR__) . '/tmp/cache');
 define('LAYOUT', 'default');
 
 spl_autoload_register(function($class) {
@@ -17,6 +18,8 @@ spl_autoload_register(function($class) {
         require_once $file;
     }
 });
+
+new \vendor\core\App();
 
 $query = $_SERVER['QUERY_STRING'];
 

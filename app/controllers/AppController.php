@@ -4,18 +4,17 @@
 namespace app\controllers;
 
 
+use vendor\core\App;
 use vendor\core\base\Controller;
 use vendor\core\Registry;
 
 class AppController extends Controller
 {
     protected $meta = [];
-    protected $app;
 
     public function __construct($route)
     {
         parent::__construct($route);
-        $this->app = Registry::getInstance();
     }
 
     public function setMeta($title = '', $description = '', $keywords = '')
