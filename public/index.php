@@ -1,25 +1,26 @@
 <?php
 error_reporting(-1);
-use vendor\core\Router;
+use fw\core\Router;
 
-require '../vendor/libs/functions.php';
+require '../vendor/fw/libs/functions.php';
+require dirname(__DIR__) . '/vendor/autoload.php';
 
 define('WWW', __DIR__);
-define('CORE', dirname(__DIR__) . '/vendor/core');
+define('CORE', dirname(__DIR__) . '/vendor/fw/core');
 define('ROOT', dirname(__DIR__));
 define('APP', dirname(__DIR__) . '/app');
-define('LIBS', dirname(__DIR__) . '/vendor/libs');
+define('LIBS', dirname(__DIR__) . '/vendor/fw/libs');
 define('CACHE', dirname(__DIR__) . '/tmp/cache');
 define('LAYOUT', 'default');
 
-spl_autoload_register(function($class) {
-    $file = ROOT . '/' . str_replace('\\', '/', $class) . '.php';
-    if(file_exists($file)) {
-        require_once $file;
-    }
-});
+//spl_autoload_register(function($class) {
+//    $file = ROOT . '/' . str_replace('\\', '/', $class) . '.php';
+//    if(file_exists($file)) {
+//        require_once $file;
+//    }
+//});
 
-new \vendor\core\App();
+new \fw\core\App();
 
 $query = $_SERVER['QUERY_STRING'];
 

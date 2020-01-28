@@ -1,6 +1,8 @@
-    <?php if(!empty($posts)):?>
+<?php if(!empty($posts)):?>
+    <div class="container">
+        <button class="btn btn-default" id="send">Кнопка</button>
     <?php foreach($posts as $post):?>
-            <div class="container">
+
     <div class="card">
         <div class="card-header">
             <?=$post['name'];?>
@@ -11,7 +13,8 @@
             </blockquote>
         </div>
     </div>
-</div>
+
 <?php endforeach; ?>
+    </div>
 <?php endif; ?>
     

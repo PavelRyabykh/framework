@@ -4,14 +4,14 @@ namespace app\controllers;
 
 
 use app\models\Main;
-use vendor\core\App;
+use fw\core\App;
 
 class MainController extends AppController
 {
     public function indexAction()
     {
         $model = new Main();
-        \R::fancyDebug(true);
+//        \R::fancyDebug(true);
         $posts = App::$app->cache->get('posts');
         if(! $posts) {
             $posts = \R::findAll('posts');

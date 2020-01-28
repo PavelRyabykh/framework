@@ -4,9 +4,9 @@
 namespace app\controllers;
 
 
-use vendor\core\App;
-use vendor\core\base\Controller;
-use vendor\core\Registry;
+use fw\core\App;
+use fw\core\base\Controller;
+use fw\core\Registry;
 
 class AppController extends Controller
 {

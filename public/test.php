@@ -36,3 +36,14 @@ R::setup('mysql:host=localhost;dbname=fw', 'root', '');
 
 $cat = R::findOne('categories', 'id = 3');
 print $cat->title;
+
+class Name
+{
+    public static function camelCase($aaaa)
+    {
+        for ($i=0;$i<10;$i++)
+        {
+            print 'f';
+        }
+    }
+}
