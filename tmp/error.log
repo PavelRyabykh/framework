@@ -1,0 +1,51 @@
+
+[2020-01-31 10:33:58]
+Текст ошибки: 
+Файл: C:\Users\prkur\Desktop\OSPanel\domains\framework\app\controllers\MainController.php
+Строка: 14
+==================================
+[2020-01-31 10:33:59]
+Текст ошибки: include(404.html): failed to open stream: No such file or directory
+Файл: C:\Users\prkur\Desktop\OSPanel\domains\framework\vendor\fw\core\Router.php
+Строка: 67
+==================================
+[2020-01-31 10:41:51]
+Текст ошибки: include(404.html): failed to open stream: No such file or directory
+Файл: C:\Users\prkur\Desktop\OSPanel\domains\framework\vendor\fw\core\Router.php
+Строка: 67
+==================================
+[2020-01-31 10:42:14]
+Текст ошибки: include(404.html): failed to open stream: No such file or directory
+Файл: C:\Users\prkur\Desktop\OSPanel\domains\framework\vendor\fw\core\Router.php
+Строка: 67
+==================================
+[2020-01-31 12:37:47]
+Текст ошибки: include(404.html): failed to open stream: No such file or directory
+Файл: C:\Users\prkur\Desktop\OSPanel\domains\framework\vendor\fw\core\Router.php
+Строка: 67
+==================================
+[2020-01-31 12:42:28]
+Текст ошибки: Паттерн маршрута a/a/a/a/a/a не описан
+Файл: C:\Users\prkur\Desktop\OSPanel\domains\framework\vendor\fw\core\Router.php
+Строка: 66
+==================================
+[2020-01-31 12:42:50]
+Текст ошибки: Контроллер <b>app\controllers\AController</b> не найден
+Файл: C:\Users\prkur\Desktop\OSPanel\domains\framework\vendor\fw\core\Router.php
+Строка: 63
+==================================
+[2020-01-31 12:43:21]
+Текст ошибки: Undefined variable: meta
+Файл: C:\Users\prkur\Desktop\OSPanel\domains\framework\app\views\layouts\default.php
+Строка: 5
+==================================
+[2020-01-31 12:43:55]
+Текст ошибки: Undefined variable: meta
+Файл: C:\Users\prkur\Desktop\OSPanel\domains\framework\app\views\layouts\default.php
+Строка: 5
+==================================
+[2020-01-31 12:44:16]
+Текст ошибки: Метод <b>app\controllers\PostsNewController::zaAction()</b> не найден
+Файл: C:\Users\prkur\Desktop\OSPanel\domains\framework\vendor\fw\core\Router.php
+Строка: 60
+==================================

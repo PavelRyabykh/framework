@@ -1,0 +1,10 @@
+[2020-01-30 17:33:44]
+Текст ошибки: Call to undefined function test()
+Файл: C:\Users\prkur\Desktop\OSPanel\domains\framework\public\test\error\index.php
+Строка: 52
+==================================
+[2020-01-30 17:34:42]
+Текст ошибки: Undefined variable: a
+Файл: C:\Users\prkur\Desktop\OSPanel\domains\framework\public\test\error\index.php
+Строка: 50
+==================================

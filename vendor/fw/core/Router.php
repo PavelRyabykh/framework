@@ -57,14 +57,13 @@ class Router
                     $cObj->$action();
                     $cObj->getView();
                 } else {
-                    print "Метод <b>$controller::$action()</b> не найден";
+                    throw new \Exception("Метод <b>$controller::$action()</b> не найден");
                 }
             } else {
-                print "Контроллер <b>$controller</b> не найден";
+                throw new \Exception("Контроллер <b>$controller</b> не найден");
             }
         } else {
-            http_response_code(404);
-            include '404.html';
+            throw new \Exception("Паттерн маршрута $url не описан", 404);
         }
     }
 

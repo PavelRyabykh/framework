@@ -1,5 +1,4 @@
 <?php
-error_reporting(-1);
 use fw\core\Router;
 
 require '../vendor/fw/libs/functions.php';
@@ -12,6 +11,7 @@ define('APP', dirname(__DIR__) . '/app');
 define('LIBS', dirname(__DIR__) . '/vendor/fw/libs');
 define('CACHE', dirname(__DIR__) . '/tmp/cache');
 define('LAYOUT', 'default');
+define('DEBUG', 1);
 
 //spl_autoload_register(function($class) {
 //    $file = ROOT . '/' . str_replace('\\', '/', $class) . '.php';
